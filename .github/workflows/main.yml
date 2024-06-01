@@ -1,0 +1,30 @@
+name: Vite-Electron Project Setup
+ 
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - uses: actions/checkout@v2
+ 
+    - name: Install Yarn
+      uses: actions/setup-node@v2
+      with:
+        node-version: 12
+        registry-url: https://registry.npmjs.org/
+        yarn-version: 1.22.4
+ 
+    - name: Install dependencies
+      run: yarn
+ 
+    - name: Build project
+      run: yarn build
+ 
+    - name: Test project
+      run: yarn test
