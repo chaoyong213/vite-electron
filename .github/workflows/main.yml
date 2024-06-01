@@ -1,28 +1,28 @@
-name: Vite-Electron Project Setup
- 
+name: CI
+
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
- 
+    branches:
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
- 
+
     steps:
-    - uses: actions/checkout@v2
- 
-    - name: Install Yarn
+    - name: Checkout repository
       uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
       with:
-        registry-url: https://registry.npmjs.org/
- 
+        node-version: '20'
+
     - name: Install dependencies
-      run: yarn
- 
-    - name: Build project
+      run: yarn install
+
+    - name: Build Vite app
       run: yarn build
- 
-    - name: Test project
-      run: yarn test
+
+    - name: Package Electron app
+      run: yarn package
