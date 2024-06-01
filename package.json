@@ -16,7 +16,7 @@
     "vite": "^3.0.0"
   },
   "dependencies": {
-    // Add any additional dependencies your app needs here
+    
   },
   "repository": {
     "type": "git",
