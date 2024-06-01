@@ -10,9 +10,5 @@
   "devDependencies": {
     "electron": "^18.0.0",
     "vite": "^3.0.0"
-  },
-  "build": {
-    "appId": "com.example.yourapp",
-    "productName": "YourAppName"
   }
 }
