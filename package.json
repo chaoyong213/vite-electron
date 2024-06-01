@@ -1,14 +1,29 @@
 {
   "name": "vite-electron-app",
   "version": "1.0.0",
+  "description": "Your Electron app description",
+  "main": "main.js",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "vite build",
-    "build:electron-main": "vite build --mode production --target electron-main",
-    "electron": "electron ."
+    "electron": "electron .",
+    "package": "electron-builder"
   },
+  "author": "Your Name",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^18.0.0",
     "vite": "^3.0.0"
-  }
+  },
+  "dependencies": {
+    // Add any additional dependencies your app needs here
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/your-electron-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/your-electron-app/issues"
+  },
+  "homepage": "https://github.com/yourusername/your-electron-app#readme"
 }
