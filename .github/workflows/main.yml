@@ -30,6 +30,7 @@ jobs:
     - name: Create Release
       id: create_release
       # uses: actions/create-release@latest
+      uses: actions/checkout@v4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -40,7 +41,7 @@ jobs:
           ${{ steps.build.outputs.diff }}
     - name: Upload Release Asset
       id: upload-asset
-      # uses: actions/upload-release-asset@latest
+      uses: actions/upload-release-asset@latest
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
