@@ -25,4 +25,4 @@ jobs:
       run: yarn build
 
     - name: Package Electron app
-      run: yarn package
+      run: yarn electron:build
