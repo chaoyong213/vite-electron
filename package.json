@@ -1,29 +1,23 @@
 {
-  "name": "vite-electron-app",
-  "version": "1.0.0",
-  "description": "Your Electron app description",
-  "main": "main.js",
+  "name": "im",
+  "private": true,
+  "version": "0.0.0",
+  "main": "index.js",
   "scripts": {
-    "start": "vite",
+    "dev": "vite",
     "build": "vite build",
-    "electron": "electron .",
-    "package": "electron-builder"
-  },
-  "author": "Your Name",
-  "license": "MIT",
-  "devDependencies": {
-    "electron": "^18.0.0",
-    "vite": "^3.0.0"
+    "preview": "vite preview",
+    "electron": "wait-on tcp:5173 && electron .",
+    "electron:serve": "concurrently -k \"yarn dev\" \"yarn electron\""
   },
   "dependencies": {
-    
+    "vue": "^3.3.11"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yourusername/your-electron-app.git"
-  },
-  "bugs": {
-    "url": "https://github.com/yourusername/your-electron-app/issues"
-  },
-  "homepage": "https://github.com/yourusername/your-electron-app#readme"
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.2",
+    "concurrently": "^8.2.2",
+    "electron": "^28.1.1",
+    "vite": "^5.0.8",
+    "wait-on": "^7.2.0"
+  }
 }

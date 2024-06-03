@@ -1,2 +1,1 @@
-# vite-electron
-start
+1记得初始化yarn和下载依赖包
