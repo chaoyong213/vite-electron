@@ -25,6 +25,6 @@ jobs:
       run: yarn build
 
     - name: Package Electron app
-      run: yarn electron:build
+      run: yarn build
       env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
