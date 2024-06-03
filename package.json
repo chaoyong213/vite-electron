@@ -10,7 +10,7 @@
     "electron": "wait-on tcp:5173 && electron .",
     "electron:serve": "concurrently -k \"yarn dev\" \"yarn electron\"",
     "electron:build": "yarn electron:build",
-    "serve": "yarn electron:serve",
+    "serve": "yarn electron:serve"
   },
   "dependencies": {
     "vue": "^3.3.11"
