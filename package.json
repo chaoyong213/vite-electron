@@ -9,8 +9,8 @@
     "preview": "vite preview",
     "electron": "wait-on tcp:5173 && electron .",
     "electron:serve": "concurrently -k \"yarn dev\" \"yarn electron\"",
-    "electron:build": "yarn electron:build",
-    "serve": "yarn electron:serve"
+    "electron:build": "vite build",
+    "serve": "vite"
   },
   "dependencies": {
     "vue": "^3.3.11"
